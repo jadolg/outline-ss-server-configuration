@@ -1,0 +1,9 @@
+keys:
+  - id: user001
+    port: 9000
+    cipher: chacha20-ietf-poly1305
+    secret: secret001
+  - id: user002
+    port: 9000
+    cipher: chacha20-ietf-poly1305
+    secret: secret002

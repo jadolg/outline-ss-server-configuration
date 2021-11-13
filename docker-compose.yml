@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ssserver:
+    image: ssserver
+    build:
+      context: .
+    volumes:
+      - ./config.yml:/config.yml
+    ports:
+      - "9000:9000"
+      - "9000:9000/udp"
+      - "9001:9001"
+    command: -config /config.yml -metrics 0.0.0.0:9001
