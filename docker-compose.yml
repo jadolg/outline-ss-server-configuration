@@ -6,8 +6,9 @@ services:
       context: .
     volumes:
       - ./config.yml:/config.yml
+      - /var/lib/GeoIP/GeoLite2-Country.mmdb:/GeoLite2-Country.mmdb
     ports:
       - "9000:9000"
       - "9000:9000/udp"
       - "9001:9001"
-    command: -config /config.yml -metrics 0.0.0.0:9001
+    command: -config /config.yml -metrics 0.0.0.0:9001 -ip_country_db /GeoLite2-Country.mmdb
