@@ -2,6 +2,7 @@ version: "3"
 services:
   ssserver:
     image: ssserver
+    restart: always
     build:
       context: .
     volumes:
