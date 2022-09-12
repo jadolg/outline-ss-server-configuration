@@ -1,4 +1,4 @@
-FROM golang:1.17 as build
+FROM golang:1.18 as build
 WORKDIR /home
 RUN git clone https://github.com/Jigsaw-Code/outline-ss-server.git
 WORKDIR /home/outline-ss-server
